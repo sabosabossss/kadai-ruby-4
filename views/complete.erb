@@ -44,6 +44,7 @@
     <% mail = params['mail'] %>
     <% tel = params['tel'] %>
     <% content = params['content'] %>
+    
         
     <table class="table">
         <caption style="caption-side:top">送信内容</caption>
@@ -65,7 +66,7 @@
         </tr>
         <tr>
             <th>内容</th>
-            <td><%= content %></td>
+            <td><%= content.gsub(/\r\n|\r|\n/, "<br>") %></td>
         </tr>
     </table>
 
